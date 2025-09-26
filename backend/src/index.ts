@@ -1,5 +1,6 @@
 import express from "express";
 import chatRoutes from "./routes/chat";
+import configRoutes from "./routes/config";
 import containerRoutes from "./routes/containers";
 
 const app = express();
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use("/containers", containerRoutes);
 app.use("/chat", chatRoutes);
+app.use("/config", configRoutes);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {

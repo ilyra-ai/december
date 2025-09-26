@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AiConfigPanel } from "./AiConfigPanel";
 import { ProjectPromptInterface } from "./ProjectPromptInterface";
 import { ProjectsGrid } from "./ProjectsGrid";
 import { ProjectsLayout } from "./ProjectsLayout";
@@ -23,6 +24,7 @@ export const ProjectsPage = () => {
         selectedTemplate={selectedTemplate}
         onTemplateSelect={handleTemplateSelect}
       />
+      <AiConfigPanel />
       <div className="mt-16">
         <div className="flex items-center justify-between mb-8">
           <div>
