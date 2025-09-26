@@ -2,8 +2,6 @@
 
 echo "Starting backend server..."
 
-# copy config file to backend directory
-cp config.ts backend/config.ts
 cd backend && bun src/index.ts &
 
 echo "Starting frontend server..."
